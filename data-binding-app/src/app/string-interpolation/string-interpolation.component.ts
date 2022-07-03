@@ -8,6 +8,11 @@ import { Component } from '@angular/core';
 })
 export class StringInterpolationComponent {
 
-person: Person;
+person: Person = {
+  firstName: 'Icaro',
+  lastName: 'Aoki',
+  age: 30,
+  address: 'Rio de Janeiro'
+}
 
 }
