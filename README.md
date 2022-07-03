@@ -3,9 +3,6 @@
 ## :memo: Descrição
 Projetos com a intenção de aprimorar o básico do angular e ajudar quem está começando
 
-## :books: Funcionalidades
-* <b>Funcionalidade 1</b>: O que essa funcionalidade faz?
-
 ## :wrench: Tecnologias utilizadas
 * Angular;
 
