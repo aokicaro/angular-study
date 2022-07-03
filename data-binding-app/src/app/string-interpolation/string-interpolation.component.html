@@ -1,0 +1,16 @@
+<mat-card class="card">
+    <mat-card-header>
+        <mat-card-title>Person data</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p>Firstname: {{person.firstName}}</p>
+        <p>Lastname: {{person.lastName}}</p>
+        <p>Age: {{person.age}}</p>
+        <p>Address: {{person.address}}</p>
+        <form>
+          <mat-form-field>
+            <input matInput placeholder="Person name" value="{{person.firstName}}">
+          </mat-form-field>
+        </form>
+    </mat-card-content>
+</mat-card>
