@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { MatCheckboxChange } from '@angular/material/checkbox';
 import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
+import { MatSelectChange } from '@angular/material/select';
 
 @Component({
   selector: 'app-event-binding',
@@ -12,6 +14,8 @@ export class EventBindingComponent {
   index: number = 0;
   spinnerMode: ProgressSpinnerMode = 'determinate';
   btnEnable: boolean = true;
+  selectDisabled: boolean = false;
+  selectedOption: string = '';
 
   save(): void {
     alert('Click!')
@@ -22,7 +26,7 @@ export class EventBindingComponent {
     this.buttonName = `It was clicked ${this.index} times`;
   }
 
-  disable() {
+  disable(): void {
     this.btnEnable = false;
     this.spinnerMode = 'indeterminate'
 
@@ -30,5 +34,13 @@ export class EventBindingComponent {
       this.btnEnable = true;
       this.spinnerMode = 'determinate';
     }, 1000);
+  }
+
+  cbChange(event: MatCheckboxChange): void {
+    this.selectDisabled = event.checked;
+  }
+
+  selectionChange(event: MatSelectChange): void {
+    this.selectedOption = event.value;
   }
 }
