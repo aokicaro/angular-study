@@ -1,0 +1,39 @@
+<section>
+  <button mat-button color="primary" (click)="save()">Save</button>
+  <button mat-button color="warn" (click)="incrementation()">{{buttonName}}</button>
+</section>
+
+<section>
+  <button mat-button color="primary" [disabled]="!btnEnable">My Button 1</button>
+  <button mat-button color="warn" [disabled]="!btnEnable">My Button 2</button>
+  <button mat-button color="warn" (click)="disable()" [disabled]="!btnEnable">Disable buttons</button>
+  <mat-progress-spinner
+    [mode]="spinnerMode"
+    value="0"
+    color="primary">
+  </mat-progress-spinner>
+</section>
+
+<section>
+  <mat-card>
+      <mat-card-content>
+        <p>
+          <mat-checkbox color="warn" (change)="cbChange($event)">Disable / Enable</mat-checkbox>
+        </p>
+        <p>
+          <mat-form-field >
+            <mat-label>Choose an option</mat-label>
+            <mat-select (selectionChange)="selectionChange($event)" [disabled]="selectDisabled">
+              <mat-option value="" selected></mat-option>
+              <mat-option value="volvo">Volvo</mat-option>
+              <mat-option value="mercedes">Mercedes</mat-option>
+              <mat-option value="audi">Audi</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+          <p>Selected Option: {{ selectedOption }}</p>
+      </mat-card-actions>
+  </mat-card>
+</section>
